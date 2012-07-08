@@ -1,3 +1,4 @@
+package main.java;
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -27,33 +28,33 @@ public class Game implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		// ausgabe();
+		this.ausgabe();
 		this.board.repaint();
 	}
-	
-	/**
-     * Returns the current map of the game.
-     * 
-     * @return the current map of the game.
-     */
-    public Map getMap() {
-            if (this.map != null) {
-                    return this.map;
-            }
-            return null;
-    }
 
-    /**
-     * Returns the current player of the game.
-     * 
-     * @return the current player of the game.
-     */
-    public Player getPlayer() {
-            if (this.player != null) {
-                    return this.player;
-            }
-            return null;
-    }
+	/**
+	 * Returns the current map of the game.
+	 * 
+	 * @return the current map of the game.
+	 */
+	public Map getMap() {
+		if (this.map != null) {
+			return this.map;
+		}
+		return null;
+	}
+
+	/**
+	 * Returns the current player of the game.
+	 * 
+	 * @return the current player of the game.
+	 */
+	public Player getPlayer() {
+		if (this.player != null) {
+			return this.player;
+		}
+		return null;
+	}
 
 	public void ausgabe() {
 		int x = this.player.getX();

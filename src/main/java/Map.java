@@ -1,4 +1,6 @@
+package main.java;
 import javax.swing.*;
+
 import java.awt.*;
 
 public class Map {
@@ -74,10 +76,8 @@ public class Map {
 	private Image grass, wall;
 
 	public Map() {
-		ImageIcon img = new ImageIcon(getClass().getResource("/grass.png"));
-		grass = img.getImage();
-		img = new ImageIcon(getClass().getResource("/wall.png"));
-		wall = img.getImage();
+		this.grass = new ImageIcon(this.getClass().getResource("../resources/grass.png")).getImage();
+		this.wall = new ImageIcon(this.getClass().getResource("../resources/wall.png")).getImage();
 	}
 
 	public int getMap(int x, int y) {

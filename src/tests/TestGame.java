@@ -1,4 +1,9 @@
+package tests;
 import static org.junit.Assert.assertTrue;
+import main.java.Game;
+import main.java.Map;
+import main.java.Player;
+
 import org.junit.Test;
 
 /**
@@ -33,7 +38,7 @@ public class TestGame {
 		testPlayer.move(-7, -10);
 		assertTrue(testPlayer.getX() == 5);
 		assertTrue(testPlayer.getY() == 5);
-		
+
 		testPlayer.move(-100, -100);
 		assertTrue(testPlayer.getX() == 5);
 		assertTrue(testPlayer.getY() == 5);

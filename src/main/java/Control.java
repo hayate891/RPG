@@ -1,3 +1,4 @@
+package main.java;
 import java.awt.event.*;
 
 public class Control implements KeyListener {

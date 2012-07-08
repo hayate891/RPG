@@ -1,3 +1,4 @@
+package main.java;
 import java.awt.*;
 import javax.swing.*;
 
@@ -6,8 +7,7 @@ public class Player {
 	private Image player;
 
 	public Player() {
-		ImageIcon img = new ImageIcon(getClass().getResource("/player.png"));
-		player = img.getImage();
+		this.player = new ImageIcon(this.getClass().getResource("../resources/player.png")).getImage();
 
 		x = 9;
 		y = 9;

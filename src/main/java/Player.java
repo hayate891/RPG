@@ -1,21 +1,22 @@
 package main.java;
+
 import java.awt.*;
 import javax.swing.*;
 
 public class Player {
-	int x, y, tileX, tileY;
+	int x, y;
 	private Image player;
 
 	public Player() {
-		this.player = new ImageIcon(this.getClass().getResource("../resources/player.png")).getImage();
-
-		x = 9;
-		y = 9;
+		this.player = new ImageIcon(this.getClass().getResource(
+				"../resources/player.png")).getImage();
+		this.x = 9;
+		this.y = 9;
 	}
 
 	public void move(int x, int y) {
 		this.x += x;
-        this.y += y;
+		this.y += y;
 	}
 
 	public Image getPlayer() {
@@ -30,21 +31,21 @@ public class Player {
 		return y;
 	}
 
-	public void spellQ() {
-	}
+	// public void spellQ() {
+	// }
 
-	public void spellW() {
-	}
+	// public void spellW() {
+	// }
 
-	public void spellE() {
-	}
+	// public void spellE() {
+	// }
 
-	public void spellR() {
-	}
+	// public void spellR() {
+	// }
 
-	public void spellD() {
-	}
+	// public void spellD() {
+	// }
 
-	public void spellF() {
-	}
+	// public void spellF() {
+	// }
 }

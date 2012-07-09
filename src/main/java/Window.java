@@ -1,6 +1,6 @@
 package main.java;
 
-import javax.swing.*;
+import javax.swing.JFrame;
 
 public class Window extends JFrame {
 	

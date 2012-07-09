@@ -1,7 +1,9 @@
 package main.java;
 
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.Timer;
 
 public class Game implements ActionListener {
 	Player player = new Player();

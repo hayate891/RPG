@@ -1,8 +1,8 @@
 package main.java;
 
-import javax.swing.*;
+import java.awt.Image;
 
-import java.awt.*;
+import javax.swing.ImageIcon;
 
 public class Map {
 	private Image grass, wall;

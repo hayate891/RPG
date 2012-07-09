@@ -1,7 +1,8 @@
 package main.java;
 
-import java.awt.*;
-import javax.swing.*;
+import java.awt.Image;
+
+import javax.swing.ImageIcon;
 
 public class Player {
 	int x, y;

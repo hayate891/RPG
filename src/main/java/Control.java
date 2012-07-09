@@ -1,6 +1,7 @@
 package main.java;
 
-import java.awt.event.*;
+import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 
 public class Control implements KeyListener {
 	Player player;

@@ -1,9 +1,11 @@
 package main.java;
+
 import javax.swing.*;
 
 import java.awt.*;
 
 public class Map {
+	private Image grass, wall;
 	int[][] mapDesign = {
 			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 					1, 1, 1, 1, 1 },
@@ -15,7 +17,6 @@ public class Map {
 					1, 1, 1, 1, 1 },
 			{ 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1,
 					1, 1, 1, 1, 1 },
-
 			{ 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
 					1, 1, 1, 1, 1 },
 			{ 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2, 2,
@@ -73,15 +74,16 @@ public class Map {
 					1, 1, 1, 1, 1 },
 
 	};
-	private Image grass, wall;
 
 	public Map() {
-		this.grass = new ImageIcon(this.getClass().getResource("../resources/grass.png")).getImage();
-		this.wall = new ImageIcon(this.getClass().getResource("../resources/wall.png")).getImage();
+		this.grass = new ImageIcon(this.getClass().getResource(
+				"../resources/grass.png")).getImage();
+		this.wall = new ImageIcon(this.getClass().getResource(
+				"../resources/wall.png")).getImage();
 	}
 
 	public int getMap(int x, int y) {
-		return mapDesign[x][y];
+		return this.mapDesign[x][y];
 	}
 
 	// Tiles

@@ -1,3 +1,4 @@
+package main.java;
 import java.awt.Image;
 
 import javax.swing.ImageIcon;
@@ -11,8 +12,7 @@ public class Item {
 	public Item(Game game, int x, int y){
 		this.game = game;
 		
-		ImageIcon img = new ImageIcon("sword.png");
-		item = img.getImage();
+		this.item = new ImageIcon(this.getClass().getResource("../resources/sword.png")).getImage();
 
 		this.x = x;
 		this.y = y;

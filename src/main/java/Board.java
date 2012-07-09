@@ -3,6 +3,11 @@ import java.awt.*;
 import javax.swing.*;
 
 public class Board extends JPanel {
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	
 	Map map;
 	Player player;
 	Graphics graphics;

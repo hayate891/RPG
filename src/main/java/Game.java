@@ -1,4 +1,5 @@
 package main.java;
+
 import java.awt.event.*;
 import javax.swing.*;
 
@@ -28,8 +29,8 @@ public class Game implements ActionListener {
 	}
 
 	public void actionPerformed(ActionEvent e) {
-		this.ausgabe();
 		this.board.repaint();
+		System.out.println(this.toString());
 	}
 
 	/**
@@ -56,9 +57,9 @@ public class Game implements ActionListener {
 		return null;
 	}
 
-	public void ausgabe() {
+	public String toString() {
 		int x = this.player.getX();
 		int y = this.player.getY();
-		System.out.println("Player -- Position: " + x + ":" + y);
+		return "Player -- Position: " + x + ":" + y;
 	}
 }

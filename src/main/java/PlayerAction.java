@@ -41,9 +41,11 @@ public class PlayerAction {
 		int xp = this.player.getX();
 		int yp = this.player.getY();
 		if (this.itemMap.getItemMap(yp, xp) != 0) {
-			int ItemID = this.itemMap.getItemMap(yp, xp);
-			this.inventory.add(ItemID);
-			this.itemMap.ItemMapDesign[yp][xp] = 0;
+			if (this.inventory.isFull() == false) {
+				int ItemID = this.itemMap.getItemMap(yp, xp);
+				this.inventory.add(ItemID);
+				this.itemMap.ItemMapDesign[yp][xp] = 0;
+			}
 		}
 	}
 

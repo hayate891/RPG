@@ -7,14 +7,16 @@ import javax.swing.Timer;
 
 public class Game implements ActionListener {
 	Player player = new Player();
-	Item item = new Item(this, 10, 10);
+	Inventory inventory = new Inventory();
 	Map map = new Map();
+	ItemMap itemMap = new ItemMap();
 	Board board;
+	PlayerAction playeraction;
 	Timer timer;
 
 	public Game() {
 		this.board = new Board(this);
-
+		this.playeraction = new PlayerAction(this);
 		Control control = new Control(this);
 
 		Window window = new Window();
@@ -32,7 +34,7 @@ public class Game implements ActionListener {
 
 	public void actionPerformed(ActionEvent e) {
 		this.board.repaint();
-		System.out.println(this.toString());
+		// System.out.println(this.toString());
 	}
 
 	/**

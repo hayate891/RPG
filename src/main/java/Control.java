@@ -4,12 +4,10 @@ import java.awt.event.KeyEvent;
 import java.awt.event.KeyListener;
 
 public class Control implements KeyListener {
-	Player player;
-	Map map;
+	PlayerAction playeraction;
 
 	Control(Game game) {
-		this.player = game.player;
-		this.map = game.map;
+		this.playeraction = game.playeraction;
 	}
 
 	@Override
@@ -22,30 +20,24 @@ public class Control implements KeyListener {
 			System.out.print("pressed: ESC - System.Exit");
 			System.exit(0);
 			break;
+		// Movement
 		case KeyEvent.VK_UP:
 			// System.out.println("pressed: UP");
-			if (this.map.getMap(this.player.getY() - 1, this.player.getX()) != 1) {
-				this.player.move(0, -1);
-			}
-			break;
-		case KeyEvent.VK_DOWN:
-			// System.out.println("pressed: DOWN");
-			if (this.map.getMap(this.player.getY() + 1, this.player.getX()) != 1) {
-				this.player.move(0, 1);
-			}
-			break;
-		case KeyEvent.VK_LEFT:
-			// System.out.println("pressed: LEFT");
-			if (this.map.getMap(this.player.getY(), this.player.getX() - 1) != 1) {
-				this.player.move(-1, 0);
-			}
+			this.playeraction.move(1);
 			break;
 		case KeyEvent.VK_RIGHT:
 			// System.out.println("pressed: RIGHT");
-			if (this.map.getMap(this.player.getY(), this.player.getX() + 1) != 1) {
-				this.player.move(1, 0);
-			}
+			this.playeraction.move(2);
 			break;
+		case KeyEvent.VK_DOWN:
+			// System.out.println("pressed: DOWN");
+			this.playeraction.move(3);
+			break;
+		case KeyEvent.VK_LEFT:
+			// System.out.println("pressed: LEFT");
+			this.playeraction.move(4);
+			break;
+		// Spells
 		case KeyEvent.VK_Q:
 			System.out.println("pressed: Q - Spell 1");
 			break;
@@ -63,6 +55,15 @@ public class Control implements KeyListener {
 			break;
 		case KeyEvent.VK_F:
 			System.out.println("pressed: F - Spell 6");
+			break;
+
+		case KeyEvent.VK_X:
+			//System.out.println("pressed: X - Item aufgenommen!");
+			this.playeraction.pickUpItem();
+			break;
+		case KeyEvent.VK_B:
+			System.out.println("pressed: B - Zeige Inventory");
+			this.playeraction.openInventory();
 			break;
 		default:
 			System.out.println("pressed");

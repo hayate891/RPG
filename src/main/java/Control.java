@@ -62,7 +62,7 @@ public class Control implements KeyListener {
 			this.playeraction.pickUpItem();
 			break;
 		case KeyEvent.VK_B:
-			System.out.println("pressed: B - Zeige Inventory");
+			//System.out.println("pressed: B - Zeige Inventory");
 			this.playeraction.openInventory();
 			break;
 		default:

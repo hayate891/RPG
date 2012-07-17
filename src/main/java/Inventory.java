@@ -37,6 +37,15 @@ public class Inventory {
 		return this.size;
 	}
 
+	public boolean isFull() {
+		if (this.size == this.maxSize) {
+			return true;
+		} else {
+			return false;
+		}
+
+	}
+
 	public void ausgabe() {
 		InventoryItem z = this.start;
 		System.out.println("Inventory:");

@@ -30,11 +30,10 @@ public class Board extends JPanel {
 		for (int y = 0; y < 11; y++) {
 			for (int x = 0; x < 11; x++) {
 				// Map
-				if (this.map.getMap(yp, xp) == 1) {
-					graphics.drawImage(this.map.getWall(), x * 32, y * 32, null);
-				} else if (this.map.getMap(yp, xp) == 2) {
-					graphics.drawImage(this.map.getGrass(), x * 32, y * 32,
-							null);
+				if (this.map.getMap(yp, xp) != 0) {
+					int ImageID = this.map.getMap(yp, xp);
+					graphics.drawImage(this.map.getMapImage(ImageID), x * 32,
+							y * 32, null);
 				}
 				// Item
 				if (this.itemMap.getItemMap(yp, xp) != 0) {

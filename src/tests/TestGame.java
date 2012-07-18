@@ -19,8 +19,6 @@ public class TestGame {
 		assertTrue(testGame.getPlayer() != null);
 
 		Map testMap = new Map();
-		assertTrue(testMap.getGrass() != null);
-		assertTrue(testMap.getWall() != null);
 
 		// Test if returns the right tiles
 		assertTrue(testMap.getMap(0, 0) == 1);

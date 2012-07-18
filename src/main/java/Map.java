@@ -87,11 +87,13 @@ public class Map {
 	}
 
 	// Tiles
-	public Image getGrass() {
-		return grass;
-	}
-
-	public Image getWall() {
-		return wall;
+	public Image getMapImage(int ImageID) {
+		if (ImageID == 1) {
+			return this.wall;
+		} else if (ImageID == 2) {
+			return this.grass;
+		} else {
+			return null;
+		}
 	}
 }
